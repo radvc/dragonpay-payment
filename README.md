@@ -46,7 +46,7 @@ The ```pay``` method will generate the dragonpay url it will not redirect you to
 
 ## Important Note
 
-As of now the dragonpay url is using the production environment (https://gw.dragonpay.ph/Pay.aspx), I am currently working on the test environment of the dragonpay because as of the moment dragonpay returns an invalid digest error when using test url.
+This gem uses the dragonpay production environment url (https://gw.dragonpay.ph/Pay.aspx) for generating the payment url, I am currently working on the test environment of the dragonpay because as of the moment dragonpay returns an invalid digest error when using test url.
 
 ## Contributing
 

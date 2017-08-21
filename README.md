@@ -44,6 +44,10 @@ end
 
 The ```pay``` method will generate the dragonpay url it will not redirect you to the dragonpay website.
 
+## Important Note
+
+As of now the dragonpay url is using the production environment (https://gw.dragonpay.ph/Pay.aspx), I am currently working on the test environment of the dragonpay because as of the moment dragonpay returns an invalid digest error when using test url.
+
 ## Contributing
 
 Bug reports and pull requests are welcome. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.

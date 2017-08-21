@@ -18,19 +18,35 @@ Or install it yourself as:
 
     $ gem install dragonpay_payment
 
+## Configuration
+
+```ruby
+# config/initializers/dragonpay_payment.rb
+
+DragonpayPayment.configure do |config|
+  config.merchant_id = 'your_merchant_id'
+  config.secret_key = 'your_secret_key'
+end
+```
+
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+  @process_payment = DragonpayPayment::Merchant.new(
+    amount: '500.00',
+    ccy: 'PHP',
+    description: 'Test Payment',
+    email: 'testpayment@payment.com'
+  )
+  
+  @process_payment.pay
+```
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+The ```pay``` method will generate the dragonpay url it will not redirect you to the dragonpay website.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/dragonpay_payment. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
